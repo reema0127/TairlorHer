@@ -1,0 +1,229 @@
+body, html {
+    margin: 0;
+    padding: 0;
+   
+}
+.logo {
+    width: 180px; /* Fixed width */
+    height: auto; /* Height adjusts automatically to maintain the aspect ratio */
+}
+.navbar {
+    background-color: #fadadd;
+    height: 90px; /* Adjust the height as needed */
+    padding-top: 10px;
+}
+ body {
+    background-color: #f8f6f1;
+ }
+ @font-face {
+    font-family: 'playlist';
+    src: url('/public/fonts/PlaylistScript.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrate';
+    src: url('/public/fonts/Montserrat.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM';
+    src: url('/public/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
+}
+
+.floral {
+    font-size: 75px;
+    font-family:playlist;
+}
+.container {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f8f6f1;
+}
+
+.slider {
+    height: 80vh; 
+    width: 90vw; 
+    display: flex;
+    perspective: 1000px;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box; 
+    padding: 0%;
+    margin-right: 4%;
+}
+
+
+.slider [class*="box"] {
+    overflow: hidden;
+
+
+    transition: all 3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    position: absolute;
+    
+}
+
+.slider [class*="box"]:nth-child(7),
+.slider [class*="box"]:nth-child(1) {
+    width: 650px; /* Adjusted width */
+    height: 725px; /* Adjusted height */
+    transform: scale(0.2) translate(-50%, -50%);
+    top: 5%;
+    z-index: 1;
+}
+
+.slider [class*="box"]:nth-child(2),
+.slider [class*="box"]:nth-child(6) {
+    width: 650px; /* Adjusted width */
+    height: 725px;
+    transform: scale(0.4) translate(-60%, -50%);
+    top: 10%;
+    z-index: 2;
+}
+
+.slider [class*="box"]:nth-child(3),
+.slider [class*="box"]:nth-child(5) {
+    width: 650px; /* Adjusted width */
+    height: 725px;
+    transform: scale(0.6) translate(-50%, -50%);
+    top: 20%;
+    z-index: 3;
+}
+
+.slider [class*="box"]:nth-child(4) {
+    width: 425px; /* Adjusted width */
+    height: 550px;
+    color: #fff;
+    transform: scale(1) translate(-50.2%, -50%);
+    top: 50%;
+    z-index: 4;
+    
+}
+
+.slider [class*="box"]:nth-child(1) {
+    left: -13%;
+    opacity: 0;
+}
+
+.slider [class*="box"]:nth-child(2) {
+    left: -5%;
+}
+
+.slider [class*="box"]:nth-child(3) {
+    left: 10%;
+}
+
+.slider [class*="box"]:nth-child(4) {
+    left: 50%;
+}
+
+.slider [class*="box"]:nth-child(5) {
+    left: 71%;
+}
+
+.slider [class*="box"]:nth-child(6) {
+    left: 85%;
+    
+}
+
+.slider [class*="box"]:nth-child(7) {
+    left: 100%;
+    
+}
+
+.slider .firstSlide {
+    -webkit-animation: firstChild 1s;
+    animation: firstChild 3s;
+}
+
+/* Animation for buyers landing page slider */
+@-webkit-keyframes firstChild {
+    0% {
+        left: 100%;
+        transform: scale(0.2) translate(-50%, -50%);
+    }
+
+    100% {
+        left: -13%;
+        transform: scale(0.2) translate(-50%, -50%);
+    }
+}
+
+@keyframes firstChild {
+    0% {
+        left: 100%;
+        transform: scale(0.2) translate(-50%, -50%);
+    }
+
+    100% {
+        left: -13%;
+        transform: scale(0.2) translate(-50%, -50%);
+    }
+}
+
+ .aboutus , .about-us-para {
+
+    font-family:playlist;
+    align-content: left;
+    /* margin-right: 800px;
+    margin-left: 200px; */
+ }
+ .aboutus {
+ font-size: 75px;
+ }
+ .about-us-para {
+    font-size: 40px;
+    font-family:playlist;
+    
+ }
+ 
+ .container { 
+    background-color: #f8f6f1;
+    font-family: Montserrate;
+ }
+
+ .ivory {
+    background-color: #f8f6f1;
+    color: #d9c7a1;
+ }
+
+ .ivory-btn {
+    background-color: #d9c7a1;
+ }
+
+/*Responsiveness*/
+
+
+
+/* Adjust margin for medium screens */
+@media (max-width: 1440px) {
+    .slider {
+        margin-right: 20%; /* Adjust margin for medium screens */
+    }
+
+    .container {
+        width: 90vw;
+        height: 80vh;
+   
+    }
+}
+
+/* Adjust margin for smaller screens */
+@media (max-width: 768px) {
+    .slider {
+        margin-right: 5%; /* Adjust margin for smaller screens */
+        margin-left: 2%; /* Optional: Adjust left margin */
+    }
+}
+
+/* Adjust margin for very small screens */
+@media (max-width: 480px) {
+    .slider {
+        margin: 2%; /* Apply uniform margin */
+    }
+}
+
+ 

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply text-white font-bold py-2 rounded;
+  }
+  .login-btn {
+    @apply w-full bg-[#fbfbfb] text-[#915655] font-semibold py-2 rounded-md hover:bg-[#915655] hover:text-white;
+  }
+  .admin-btn {
+    @apply px-6 py-2 bg-[#b17f7f] text-white rounded-md;
+  }
+  .admin-tableheader {
+    @apply bg-[#b17f7f] text-white;
+  }
+}
